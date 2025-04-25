@@ -1,0 +1,21 @@
+{
+  "name": "vo1ce",
+  "version": "1.0.0",
+  "description": "A blogging platform",
+  "license": "ISC",
+  "author": "sd2k5",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.2",
+    "uuid": "^11.1.0"
+  }
+}
