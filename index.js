@@ -10,6 +10,7 @@ const DB_NAME =process.env.DB_NAME;
 const {connectToMongoDB} = require("./connection");
 const {AuthRouter} = require("./routes/authRoutes");
 const {PostRouter} = require("./routes/postRoutes");
+const {CommentRouter} = require("./routes/commentRoutes");
 const {verifyJWT} = require("./middlewares/authMiddleware");
 
 //Database 
@@ -24,7 +25,7 @@ appObj.use(cookieParser());
 
 appObj.use("/api/auth/",AuthRouter);
 appObj.use("/api/post/",verifyJWT,PostRouter);
-
+appObj.use("/api/comment/",verifyJWT,CommentRouter);
 appObj.listen(PORT,()=>{
     console.log(`Server listening at port ${PORT}`);
 });
